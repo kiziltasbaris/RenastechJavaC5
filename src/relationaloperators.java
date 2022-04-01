@@ -1,2 +1,40 @@
-package PACKAGE_NAME;public class relationaloperators {
-}
+public class relationaloperators {
+
+
+    public static void main(String[] args) {
+
+
+        int number ;
+
+        number=25;
+        String result = "";
+
+        //lets try with if
+        if (number % 2 == 0){
+            result = number + " is even";
+        }else {
+            result = number + " is odd";
+        }
+
+        //shortcut of println is sout
+        System.out.println(result);
+
+        //ternary
+        //if == ?
+        //else == :
+
+        String result2= (number % 2 == 0) ? number + " is even " : number + " is odd" ;
+
+        System.out.println(result2);
+
+
+
+        }
+
+
+
+
+
+
+    }
+
