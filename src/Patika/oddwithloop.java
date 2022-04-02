@@ -2,7 +2,7 @@ package Patika;
 
 import java.util.Scanner;
 
-public class teksayibulmaloop {
+public class oddwithloop {
 
     public static void main(String[] args) {
 
