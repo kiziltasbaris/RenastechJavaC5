@@ -5,6 +5,7 @@ public class StringPractise {
     //        //How do you split a sentence based in specific character?
 
     public static void main(String[] args) {
+
         String sentence="Hello java is planet ,java is fun java is best language" ;
 
         //split from second java

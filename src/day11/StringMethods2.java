@@ -1,7 +1,6 @@
 package day11;
 
 public class StringMethods2 {
-
     //    //toLowerCase()	      Converts a string to lower case letters	                        String
     //    //toUpperCase()	      Converts a string to upper case letters	                        String
     //    //trim()	              Removes whitespace from both ends of a string	                    String
@@ -32,6 +31,4 @@ public class StringMethods2 {
         //if you remove all spaces from sentence
         System.out.println(str2.replace(" ", ""));
     }
-
 }
-

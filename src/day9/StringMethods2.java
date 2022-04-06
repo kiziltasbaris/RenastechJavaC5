@@ -3,65 +3,71 @@ package day9;
 public class StringMethods2 {
 
 
-    //charAt()	          Returns the character at the specified index (position)	        char
-    //indexOf()	          Returns the position of the first found occurrence
-    //                      of specified characters in a string	                            int
-    //isEmpty()	          Checks whether a string is empty or not	                        boolean
-    //lastIndexOf()	      Returns the position of the last found occurrence of
-    //                      specified characters in a string	                                int
-
+    //    equals()	          Compares two strings. Returns true if the strings are equal,
+//                          and false if not	                                                boolean
+//    equalsIgnoreCase()	  Compares two strings, ignoring case considerations	            boolean
     public static void main(String[] args) {
 
-        String sentence = "Hello world . Java is here lo";
-        //012345
+        String word1 = "Hello";
+        String word2 = "Hello";//will be under pool memory
+        String word3 = new String("Hello"); //heap memory
+        String word4 = new String("Hello");
+        String word5 = "Java";
 
-        char ch=sentence.charAt(3);
-        System.out.println(ch); //second l
-        System.out.println(sentence.charAt(2)); // first l
+        System.out.println(word1.equals(word2));
+        System.out.println(word1.equals(word3));
+        System.out.println(word2.equals(word3));
+        System.out.println(word3.equals(word4));
+        System.out.println(word1.equals(word5));
+        System.out.println("*********************");
+        System.out.println(word1 == word2);//true
+        System.out.println(word1 == word3);
+        System.out.println(word2 == word3);
+        System.out.println(word3 == word4);
+        System.out.println(word1 == word5);
 
-        //indexOf()	          Returns the position of the first found occurrence
-        //                      of specified characters in a string	                            int
+        //equals method will only care exact text match
+        //it wont check how variables get created
 
-        System.out.println(sentence.indexOf("l"));//it will check first matching 'l' from sentence
-        // and returns index number which is 2
-        System.out.println(sentence.indexOf("ll")); // index will be 2
-        System.out.println(sentence.indexOf("lo")); //index will be 3
-        //since there is 2 lo it will give us first matching one
-
-        int index=sentence.indexOf(" lo"); //this will give you index of space that you had at last
-        //if you need to have index of l +1
-
-        System.out.println(index);
-        System.out.println(index +1 );
-
-        //get last index of letter e
-        //e lo
-        //re + 1
-        //e
-        System.out.println(sentence.indexOf("e lo"));//25
-        System.out.println(sentence.indexOf("e "));
-        System.out.println(sentence.indexOf("re") +1 );
+        //== operater will also care how those varibles getting created
+        //anything you create with new keyword is totaly a new object
 
 
-        //lastIndexOf()	      Returns the position of the last found occurrence of
-        //                      specified characters in a string	                                int
+        //    equalsIgnoreCase()	  Compares two strings, ignoring case considerations	         boolean
+        System.out.println("************************");
+        String str1 = "Java";
+        String str2 = "JAVA";
+        String str3 = "JaVa";
 
-        System.out.println(sentence.lastIndexOf("e")); //25
+        System.out.println(str1.equals(str2));
+        System.out.println(str1.equalsIgnoreCase(str2));
+        System.out.println(str1.equalsIgnoreCase(str3));
 
-        System.out.println("***************");
-        String sentence2 = "Hello world . Java is here llllllo";
+        boolean b1 = str1.equalsIgnoreCase(str3); // true
+        boolean b2 = str1.equals(str2);           // false
+        boolean b3 = str3.equalsIgnoreCase(str2); // true
 
-        //to get  index for  last l
-        System.out.println(sentence2.lastIndexOf("l"));
+        if (b1) {//true
+            //inside if will be excuted if b1 is true
+            System.out.println("b1 is true"); // this will run
 
-        //index of first l
-        int indexFirstl=sentence2.indexOf("l");
-        int indexLastl=sentence2.lastIndexOf("l");
-        int indexSecondl=sentence2.indexOf("lo");
-        int indexBeforeLastl=sentence2.lastIndexOf("llo");
+            if (b2) {//false
+                //inside b2 if will not run
+                System.out.println("b2 is true");
+                if (b3) {
+                    System.out.println("b3 is true");
+                } else {
+                    System.out.println("b3 is false");
+                }
+            } else {
+                System.out.println("b2 is false"); //this will run
+            }
 
-        System.out.println(indexFirstl + " , " + indexLastl);
-        System.out.println(indexSecondl + " , "+indexBeforeLastl);
+        } else {//false
+
+            System.out.println("b1 is false");
+        }
+
 
     }
 }

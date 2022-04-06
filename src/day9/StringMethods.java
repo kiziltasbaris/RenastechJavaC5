@@ -2,71 +2,85 @@ package day9;
 
 public class StringMethods {
 
+    /*
+Method	              Description                                                     	Return Type
+charAt()	          Returns the character at the specified index (position)	        char
+concat()	          Appends a string to the end of another string	                    String
+contains()	          Checks whether a string contains a sequence of characters	        boolean
+endsWith()	          Checks whether a string ends with the specified character(s)	    boolean
+equals()	          Compares two strings. Returns true if the strings are equal,
+                   and false if not	                                                boolean
+equalsIgnoreCase()	  Compares two strings, ignoring case considerations	            boolean
+indexOf()	          Returns the position of the first found occurrence
+                   of specified characters in a string	                            int
+isEmpty()	          Checks whether a string is empty or not	                        boolean
+lastIndexOf()	      Returns the position of the last found occurrence of
+                   specified characters in a string	                                int
+length()	          Returns the length of a specified string	                        int
+replace()	          Searches a string for a specified value, and returns
+                   a new string where the specified values are replaced	            String
+replaceFirst()	      Replaces the first occurrence of a substring that matches the
+                   given regular expression with the given replacement	            String
+startsWith()	      Checks whether a string starts with specified characters	        boolean
+substring()	          Extracts the characters from a string,
+                   beginning at a specified start position,
+                   and through the specified number of character	                    String
+toLowerCase()	      Converts a string to lower case letters	                        String
+toUpperCase()	      Converts a string to upper case letters	                        String
+trim()	              Removes whitespace from both ends of a string	                    String
+  */
     public static void main(String[] args) {
 
-        //    equals()	          Compares two strings. Returns true if the strings are equal,
-//                          and false if not	                                                boolean
-//    equalsIgnoreCase()	  Compares two strings, ignoring case considerations	            boolean
+
+        //concat()	          Appends a string to the end of another string	            String
+
+        String firstName = "Hello";
+        String lastName = "World";
+
+        // + was used to concat strings
+        System.out.println(firstName + " " + lastName);
+
+        System.out.println(firstName.concat(" " + lastName));
+        System.out.println(firstName.concat(" ").concat(lastName));
+
+        System.out.println("********");
+
+        int score = 90;
+        String fullName = firstName.concat(" ").concat(lastName);
+
+        //number + text = text
+
+        System.out.println(fullName.concat(" score is : ").concat(score + ""));
 
 
-        String word1="Hello";
-        String word2="Hello";//will be under pool memory
-        String word3=new String("Hello"); //heap memory
-        String word4=new String("Hello");
-        String word5="Java";
+        // contains()	     Checks whether a string contains a sequence of characters	       boolean
 
-        System.out.println(word1.equals(word2));
-        System.out.println(word1.equals(word3));
-        System.out.println(word2.equals(word3));
-        System.out.println(word3.equals(word4));
-        System.out.println(word1.equals(word5));
-        System.out.println("*********************");
-        System.out.println(word1 == word2);//true
-        System.out.println(word1 == word3);
-        System.out.println(word2 == word3);
-        System.out.println(word3 == word4);
-        System.out.println(word1 == word5);
+        //contains will check if the string contains given value
+        //if string contains it will return true
+        //if string doesnt contains it will give you false
 
-        //equals method will only care exact text match
-        //it wont check how variables get created
+        String sentence = "Java is fun@@233!";
+        System.out.println(sentence.contains("a")); //true
+        System.out.println(sentence.contains("A")); //false
+        System.out.println(sentence.contains("Ja"));//true
+        System.out.println(sentence.contains("Ja "));//false
+        System.out.println(sentence.contains("va "));//true
+        System.out.println(sentence.contains("@2@"));//false
 
-        //== operater will also care how those varibles getting created
-        //anything you create with new keyword is totaly a new object
+        boolean b1 = sentence.contains(" ");
 
+        System.out.println("*************");
 
-        //    equalsIgnoreCase()	  Compares two strings, ignoring case considerations	         boolean
-        System.out.println("************************");
-        String str1="Java";
-        String str2="JAVA";
-        String str3="JaVa";
+        //endsWith()	     Checks whether a string ends with the specified character(s)	    boolean
+        //if your string ends with given condition it will be true
+        //if it is not ending it will be false
 
-        System.out.println(str1.equals(str2));
-        System.out.println(str1.equalsIgnoreCase(str2));
-        System.out.println(str1.equalsIgnoreCase(str3));
-
-        boolean b1=str1.equalsIgnoreCase(str3); // true
-        boolean b2=str1.equals(str2);           // false
-        boolean b3=str3.equalsIgnoreCase(str2); // true
-
-        if (b1){//true
-            //inside if will be excuted if b1 is true
-            System.out.println("b1 is true"); // this will run
-
-            if (b2){//false
-                //inside b2 if will not run
-                System.out.println("b2 is true");
-                if (b3){
-                    System.out.println("b3 is true");
-                }else {
-                    System.out.println("b3 is false");
-                }
-            }else {
-                System.out.println("b2 is false"); //this will run
-            }
-
-        }else {//false
-
-            System.out.println("b1 is false");
-        }
+        String sentence2 = "Hello world java is here 47";
+        System.out.println(sentence2.endsWith("7"));
+        System.out.println(sentence2.endsWith("47"));
+        System.out.println(sentence2.endsWith(" 47"));
+        System.out.println(sentence2.endsWith("here47"));//false
+        System.out.println(sentence2.endsWith("Hello world java is here 47"));
     }
+
 }
