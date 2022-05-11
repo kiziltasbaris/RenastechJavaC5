@@ -15,6 +15,7 @@ public class c4Array {
 
             if (numberList[i] %2 ==0 ){
                 System.out.println(numberList[i] + " is even number ");
+
             }
 
         }
