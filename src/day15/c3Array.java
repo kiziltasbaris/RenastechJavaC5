@@ -24,7 +24,7 @@ public class c3Array {
 //        arr2[1]=4;
 //        arr2[2]=5;
         for (int i =0 ; i <= arr2.length -1 ; i++){
-            arr2[i]= i + 3;
+            arr2[i]= i + 1;
             //arr2[0]= 0 + 3; =3
             //arr2[1]= 1 + 3; =4
             //arr2[2]= 2 + 3; =5
