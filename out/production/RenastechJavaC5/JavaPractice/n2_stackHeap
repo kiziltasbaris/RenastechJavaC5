@@ -1,0 +1,19 @@
+What is the difference between stack and heap?
+
+---Java heap space is used throughout the application,but stack is only used for the method or methods currently running.
+
+---The heap space contains all objects are created,but Stack contains any reference to those objects.
+
+--Object stored in the Heap can be accessed throughout the application.Primitive local variables are only accessed the
+Stack memory blocks that contain their methods.
+
+---Memory allocation in the Heap Space is accessed through a complex, young-generation, old generation system.
+Stack is accessed through a last-in, first-out (LIFO) memory allocation system.
+
+---Heap space exists as long as the application runs and  is larger than Stack,which is temporary,but faster.
+
+---The Heap Space contains all objects are created,but stack contains any reference to those objects.
+
+---Objects stored in the Heap can be accessed throughout the application.
+
+---Primitive local variables are only accessed the Stack Memory blocks that contain their methods.

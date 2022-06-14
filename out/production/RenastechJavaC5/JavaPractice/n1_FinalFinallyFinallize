@@ -1,0 +1,26 @@
+
+FINAL ---> is a keyword and used to apply restrictions on class,method and variable...
+
+*final Class  CAN'T be Inherited
+*final Method CAN'T be Overridden
+*final Variable value CAN'T be changed
+
+FINALLY ---> is a block and used to place important code , it will be executed whether exception handled or not.
+
+
+public class Main {
+  public static void main(String[] args) {
+    try {
+      int[] myNumbers = {1, 2, 3};
+      System.out.println(myNumbers[10]);
+    } catch (Exception e) {
+      System.out.println("Something went wrong.");
+    } finally {
+      System.out.println("The 'try catch' is finished.");
+    }
+  }
+}
+
+
+FINALIZE ---> is  a method and used to perform clean-up processing before Object is Garbage collected.
+
