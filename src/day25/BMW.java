@@ -42,4 +42,12 @@ public class BMW {
         return brand + "----" + modelYear + " has engine " + hasEngine +"======"+ price;
     }
 
+    public void startCar() {
+    }
+
+    public void consume() {
+    }
+
+    public void stopCar() {
+    }
 }
